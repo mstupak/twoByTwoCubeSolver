@@ -5,12 +5,13 @@
  */
 package cubesolver.cubesolver;
 
-import cubesolver.*;
-
 /**
  *
- * @author Mike
+ * @author stupak
+ * These represent positions on a face
+ * Upper Left    Upper Right
+ * Lower Left    Lower Right
  */
-public enum FaceName {
-    U, L, F, R, D, B
+public enum FacePos {
+    UL, UR, DL, DR
 }
