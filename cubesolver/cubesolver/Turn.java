@@ -5,12 +5,10 @@
  */
 package cubesolver.cubesolver;
 
-import cubesolver.*;
-
 /**
  *
- * @author Mike
+ * @author stupak
  */
-public enum FaceName {
-    U, L, F, R, D, B
+public enum Turn {
+    CW, CCW, CW2
 }

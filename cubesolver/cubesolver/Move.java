@@ -5,18 +5,20 @@
  */
 package cubesolver.cubesolver;
 
-import cubesolver.*;
-
 /**
  *
- * @author Mike
+ * @author stupak
  */
-public enum Color
-{
-    W, R, B, O, G, Y;
+public class Move {
+    List<MoveElement> elementList;
     
-    public String toString() 
+    public Move()
     {
-        return this.name();
+        elementList = new Vector();
+    }
+    
+    public add(Spot from, Spot to)
+    {
+        elementList.add( new MoveElement(from, to) );
     }
 }

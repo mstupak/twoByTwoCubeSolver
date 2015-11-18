@@ -22,6 +22,14 @@ public class Face {
      * |2|3|
      * +-+-+
      *
+     * OR
+     *
+     * +--+--+
+     * |UL|UR|
+     * +--+--+
+     * |DL|DR|
+     * +--+--+
+     *
     */
     
     Color tiles[];
@@ -29,6 +37,16 @@ public class Face {
     public Face()
     {
         tiles = new Color[4];
+    }
+    
+    public Face( Face f )
+    {
+        tiles = new Color[4];
+        
+        for( int i=0; i<4; i++ )
+        {
+            tiles[i] = f.tiles[i];
+        }
     }
     
     public Face(Color zero, Color one, Color two, Color three)
@@ -54,11 +72,11 @@ public class Face {
     {
         String s;
         
-        s = "+-+-+\n";
-        s += "|" + tiles[0] + "|" + tiles[1] + "|\n";
+        s =  "+===+\n";
+        s += "#" + tiles[FacePos.UL] + "|" + tiles[FacePos.UR] + "#\n";
         s += "+-+-+\n";
-        s += "|" + tiles[2] + "|" + tiles[3] + "|\n";
-        s += "+-+-+\n";
+        s += "#" + tiles[FacePos.DL] + "|" + tiles[FacePos.DR] + "#\n";
+        s += "+===+";
         
         return s;
     }
