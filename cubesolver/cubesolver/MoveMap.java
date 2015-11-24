@@ -5,7 +5,6 @@
  */
 package cubesolver.cubesolver;
 
-import cubesolver.cubesolver.FaceName;
 import cubesolver.cubesolver.Move;
 import cubesolver.cubesolver.Turn;
 /**
@@ -13,9 +12,9 @@ import cubesolver.cubesolver.Turn;
  * @author stupak
  */
 public class MoveMap {
-    Move moveArray[6][3];
+    Move[][] moveArray = new Move[6][3];
     
-    public MoveMap
+    public MoveMap()
     {
         Move m;
         
@@ -47,4 +46,7 @@ public class MoveMap {
     }
     
     public Move getMoveList(FaceName f, Turn t)
+    {
+        return moveArray[f][t];
+    }
 }

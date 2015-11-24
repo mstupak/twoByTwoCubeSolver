@@ -6,24 +6,19 @@
 package cubesolver.cubesolver;
 
 import cubesolver.*;
-import cubesolver.cubesolver.Spot;
 
 /**
  * The CubeSolver class implements an application that
  simply prints "Hello World!" to standard output.
  */
 public class CubeSolver {
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*
-        Spot s = new Spot(FaceName.U, 2);
-        System.out.println( s.facename() );
-        System.out.println( s.pos() );
-        */
         
+        // Tracks transitions required to implement high level "moves" (e.g. F, U, D, etc)
         MoveMap mm = new MoveMap();
         Move ml;
         
@@ -38,8 +33,10 @@ public class CubeSolver {
 
         c2 = c.turn( FaceName.F, Turn.CW );
         System.out.println(c2);
+    }
+    
+}
 
-        
         /* Test Face Class
         Face f = new Face(Color.W, Color.B, Color.O, Color.G);
         System.out.println(f);
@@ -57,6 +54,9 @@ public class CubeSolver {
             System.out.println("----");
         }
         */
-    }
-    
-}
+
+        /* Test Spot class
+        Spot s = new Spot(FaceName.U, 2);
+        System.out.println( s.facename() );
+        System.out.println( s.pos() );
+        */

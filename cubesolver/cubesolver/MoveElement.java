@@ -5,29 +5,27 @@
  */
 package cubesolver.cubesolver;
 
-import cubesolver.cubesolver.FaceName;
-
 /**
  *
  * @author stupak
  */
-public class Spot {
-    FaceName f;
-    int pos;
+public class MoveElement {
+    Spot from;
+    Spot to;
     
-    public Spot(FaceName f, int pos)
+    public MoveElement(Spot from, Spot to)
     {
-        this.f = f;
-        this.pos = pos;
+        this.from = from;
+        this.to = to;
     }
     
-    public FaceName facename()
+    public MoveElement from()
     {
-        return f;
+        return from;
     }
     
-    public int pos()
+    public MoveElement to()
     {
-        return this.pos;
+        return to;
     }
 }

@@ -17,7 +17,7 @@ public class Move {
         elementList = new Vector();
     }
     
-    public add(Spot from, Spot to)
+    public void add(Spot from, Spot to)
     {
         elementList.add( new MoveElement(from, to) );
     }

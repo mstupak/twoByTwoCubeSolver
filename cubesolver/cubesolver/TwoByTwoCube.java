@@ -44,10 +44,11 @@ public class TwoByTwoCube {
     
     public void turn(MoveMap mm, FaceName f, Turn t)
     {
-        Move ml = mm(f,t);
-        MoveElement me;
         
-        while()
+        Move ml = mm.getMoveList(f,t);
+        
+        // While moves in ml
+            //doMove(srcCube, move.from, dstCube, move.to)
     }
     
     private String zipFaces(String leftStr[], String midStr[], String rightStr[])
