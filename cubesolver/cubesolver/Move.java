@@ -9,8 +9,13 @@ package cubesolver.cubesolver;
  *
  * @author stupak
  */
-public class Move {
+public class Move implements Iterable<List>{
+    /* should probably be extending List here or something...*/
     List<MoveElement> elementList;
+    
+    public Iterator{
+        return elementList.Iterator();
+    }
     
     public Move()
     {
