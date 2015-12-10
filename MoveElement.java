@@ -3,6 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/* Records automated moves related to a turn */
+
 package cubesolver.cubesolver;
 
 import cubesolver.cubesolver.Spot;
@@ -21,12 +24,12 @@ public class MoveElement {
         this.to = to;
     }
     
-    public MoveElement from
+    public Spot from( )
     {
         return from;
     }
     
-    public MoveElement to
+    public Spot to( )
     {
         return to;
     }
